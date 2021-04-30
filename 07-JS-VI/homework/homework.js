@@ -51,7 +51,7 @@ function map(array, cb) {
 
   var newAr = []
   newAr = array.map(e => cb(e));
-      
+     
   return newAr;
 }
 
@@ -68,9 +68,7 @@ array.forEach(function(e,i){
     newAr.push(array[i]);
     };
 });
-
 return newAr;
-
 }
 
 // No modificar nada debajo de esta línea
