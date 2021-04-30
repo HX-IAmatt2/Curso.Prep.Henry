@@ -68,6 +68,7 @@ array.forEach(function(e,i){
     newAr.push(array[i]);
     };
 });
+
 return newAr;
 }
 
