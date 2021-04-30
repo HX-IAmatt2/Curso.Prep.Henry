@@ -18,7 +18,7 @@ function operacionMatematica(n1, n2, cb) {
   //Vamos a recibir una función que realiza una operación matemática como callback junto con dos números.
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
-  
+
   cb(n1,n2);
 
 }
@@ -33,8 +33,7 @@ function sumarArray(numeros, cb) {
 
   numeros.forEach(e => sum=sum+e);
 
-  cb(sum);
-  
+  cb(sum);  
 }
 
 function forEach(array, cb) {
