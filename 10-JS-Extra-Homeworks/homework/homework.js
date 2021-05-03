@@ -65,7 +65,7 @@ function capToFront(s) {
   resultado = mayusculas.join('').concat(minusculas.join(''));
   
   return resultado;
-  
+
 }
 
 
@@ -75,6 +75,8 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+
+
 } 
 
 
@@ -83,6 +85,21 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+
+  var contador=0;
+  var res=0;
+  var n = numero.toString();  
+
+  for (let i = 0; i < n.length; i++) {
+    contador ++;
+    if (n[i]!=n[n.length-contador]) {
+      res = "No es capicua";
+    }
+    else {
+      res = "Es capicua";
+    }
+  }
+  return res;
 }
 
 
