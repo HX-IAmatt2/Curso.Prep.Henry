@@ -49,6 +49,18 @@ img {
     margin-top: 2rem;
 }
 
+.secc-container a {
+    text-decoration: none;
+    font-weight: bold;  
+    font-size: 22;
+    color: rgb(42, 1, 107);
+    transition: transform 0.3s ease-out;
+}
+
+.secc-container a:hover {
+    color:rgb(98, 1, 255);
+    transform: scale(1.5);
+}
 
 
 #navbar {
@@ -72,7 +84,8 @@ img {
 }
 
 #navbar li {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     display: flex;
 }
 
