@@ -90,7 +90,7 @@ function capicua(numero){
   var res=0;
   var n = numero.toString();  
 
-  for (let i = 0; i < n.length; i++) {
+  for (var i = 0; i < n.length; i++) {
     contador ++;
     if (n[i]!=n[n.length-contador]) {
       res = "No es capicua";
@@ -107,6 +107,23 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+
+  var array = cadena.split('');
+  var res=[];
+  
+  for (var i = 0; i < array.length; i++) {
+  
+    if (array[i]==='a' || array[i]==='b' || array[i]==='c') {
+      
+    }
+  
+    else {res.push(array[i]);
+  
+    };
+  
+  }
+  
+  return(res.join(''));
 }
 
 
