@@ -5,6 +5,7 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+
   if (x>y) {
     return x;
   }
@@ -18,10 +19,12 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
+
   if (edad>=18) {
     return "Allowed";
   }
   return "Not allowed";
+
 }
   
 function conection(status) {
@@ -30,6 +33,7 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
+
   if (status===1) {
     return "Online";
   }
@@ -48,16 +52,15 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  if (idioma==="aleman") {
-    return "Guten Tag!";
-  }
-  else if (idioma==="mandarin") {
-    return "Ni Hao!";
-  }
-  else if (idioma==="ingles") {
-    return "Hello!";
-  }
-  return "Hola!";
+
+  switch (idioma){
+    case 'aleman': return 'Guten Tag!';
+    case 'mandarin': return 'Ni Hao!';
+    case 'ingles': return 'Hello!';
+}
+
+  return 'Hola!';
+
 }
 
 function colors(color) {
@@ -219,6 +222,7 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+
   for (var i=0; i<8; i++) {
     numero=numero+5;
   }
