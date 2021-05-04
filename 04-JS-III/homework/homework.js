@@ -3,20 +3,21 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
   // Tu código:
+
   return array[0];
 }
-
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+
   return array[array.length-1];
 }
-
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+
   return array.length;
 }
 
@@ -26,9 +27,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  for (var i=0; i<array.length; i++) {
-    array[i]=array[i]+1;
+
+  for (let i=0; i<array.length; i++) {
+    array[i]++;
   }
+  
   return array;
 }
 
@@ -37,6 +40,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+
   array.push(elemento)
   return array;
 }
@@ -47,6 +51,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+
   array.unshift(elemento);
   return array;
 }
@@ -58,6 +63,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+
   return palabras.join(" ");
 }
 
@@ -67,25 +73,30 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
 
-  for (var i=0; i<array.length; i++) {
+  for (let i=0; i<array.length; i++) {
     if (array[i]===elemento) {
       return true;
+      break;
     }
   }
   return false;
 }
 
 
-
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:'
+
   var total=0
 
-  for (var i=0; i<numeros.length; i++) {
-    total=total+numeros[i];
-  }
+  numeros.forEach(e => total=total+e)
+
+  /* OPCION CON FOR:
+  for (let i=0; i<numeros.length; i++) {
+    total=total+numeros[i]; }
+  */
+
   return total;
 }
 
@@ -94,15 +105,16 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
- var sumatoria=0  
 
-  for (var i=0; i<resultadosTest.length; i++) {
-    sumatoria=sumatoria+resultadosTest[i];
-  }
+ var sumatoria=0;
 
-  var total=sumatoria/resultadosTest.length;
-  return total;
+ resultadosTest.forEach(e => sumatoria=sumatoria+e)  // opcion corta con forEach
 
+ // for (let i=0; i<resultadosTest.length; i++) {
+ //   sumatoria=sumatoria+resultadosTest[i];}
+
+  var promedio=sumatoria/resultadosTest.length;
+  return promedio;
 }
 
 
@@ -110,13 +122,18 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-var mayor=0
 
-  for (i=0; i<numeros.length; i++) {
+  var mayor=0;
+
+  numeros.forEach(e => {if (e>mayor) {mayor=e}})   
+
+/* OPCION CON FOR
+  for (let i=0; i<numeros.length; i++) {
     if (numeros[i]>mayor) {
       mayor=numeros[i]
     }
-  }
+  }*/
+
   return mayor;
 }
 
@@ -131,8 +148,8 @@ function multiplicarArgumentos() {
   if (arguments.length==0) {
     return 0;
   }
-  
-  for (var i=0; i<arguments.length; i++) {
+    
+  for (let i=0; i<arguments.length; i++) {
     total=total*arguments[i];
   }
   
@@ -147,14 +164,16 @@ function cuentoElementos(arreglo){
 
   var conteo=0;
 
+  arreglo.forEach(e => {if (e>18) conteo++})
+
+  /* OPCION CON FOR
   for (var i=0; i<arreglo.length; i++) {
     if (arreglo[i]>18) {
       conteo++;
     }
-  }
+  }*/
 
   return conteo;
-
 }
 
 
@@ -163,6 +182,11 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
+
+if (numeroDeDia>=2 && numeroDeDia<=6){return 'Es dia Laboral'}
+else {return 'Es fin de semana'};
+
+/* OPCION CON SWITCH
   switch (numeroDeDia) {
     case 2:
     case 3:
@@ -174,6 +198,7 @@ function diaDeLaSemana(numeroDeDia) {
     case 7:
       return "Es fin de semana";
   }
+  */
 } 
 
 
@@ -182,11 +207,11 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   
-  var num = n.toString()  // ????
-  if(num.charAt(0) === "9"){  // ????
-    return true
-  }
-  return false
+  var num = n.toString()  // lo paso a string
+
+  if (num[0]==9) {return true}
+  
+  return false;
 
 }
 
@@ -198,6 +223,11 @@ function todosIguales(arreglo) {
 
   var res=0;
 
+  arreglo.forEach(e => {if (e===arreglo[0]){res=true}else{res=false}});
+
+  return res;
+
+  /* OPCION CON FOR
   for (var i=0; i<arreglo.length; i++) {
     if (arreglo[i]===arreglo[0]) {
       res=true;
@@ -206,6 +236,8 @@ function todosIguales(arreglo) {
     }
   }
   return res;
+  */
+
 } 
 
 
@@ -217,12 +249,15 @@ function mesesDelAño(array) {
 
   var final=[];
 
-  for (var i=0; i<array.length; i++) {
+  array.forEach(e=> {if (e==='Enero' || e==='Marzo' || e==='Noviembre') {final.push(e)}});
+
+  /* OPCION CON FOR
+  for (let i=0; i<array.length; i++) {
 
     if (array[i]==="Enero" || array[i]==="Marzo" || array[i]==="Noviembre") {
       final.push(array[i]);
     }
-  }
+  }*/
 
   if (final.length===3) {
     return final;
@@ -242,13 +277,18 @@ function mayorACien(array) {
   
   var res=[];
 
-  for (var i=0; i<array.length; i++) {
+  array.forEach(e=> {if (e>100) {res.push(e)}});
+
+/*OPCION CON FOR
+  for (let i=0; i<array.length; i++) {
 
     if (array[i]>100) {
 
       res.push(array[i]);
     }
   }
+*/
+
   return res;
 }
 
@@ -261,6 +301,7 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+
   var array=[]
 
   for (let i=0; i<10; i++){
@@ -275,6 +316,7 @@ function breakStatement(numero) {
     else { 
       array.push(numero)}
   }
+  
   return array;
 }
 
