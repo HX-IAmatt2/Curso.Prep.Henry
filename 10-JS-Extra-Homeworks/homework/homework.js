@@ -76,6 +76,18 @@ function asAmirror(str) {
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
 
+  var cadena=str.split(' ');
+  var cadena2=[];
+  var res=[];
+  
+  for (var i = 0; i < cadena.length; i++) {
+    let x = cadena[i].split('').reverse().join('');
+    cadena2.push(x);
+  }
+  
+  res=cadena2.join(' ')
+  
+  return res;
 
 } 
 
@@ -114,11 +126,10 @@ function deleteAbc(cadena){
   for (var i = 0; i < array.length; i++) {
   
     if (array[i]==='a' || array[i]==='b' || array[i]==='c') {
-      
     }
   
-    else {res.push(array[i]);
-  
+    else 
+    {res.push(array[i])
     };
   
   }
