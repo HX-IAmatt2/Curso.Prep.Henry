@@ -98,19 +98,16 @@ function capicua(numero){
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
 
-  var contador=0;
-  var res=0;
-  var n = numero.toString();  
+  var res = 'Es capicua';
+  
+  let arr = numero.toString();  
+  arr = arr.split('');
 
-  for (var i = 0; i < n.length; i++) {
-    contador ++;
-    if (n[i]!=n[n.length-contador]) {
-      res = "No es capicua";
+  arr.forEach(function(e,i){
+    if (e !== arr[arr.length-(i+1)]){
+      res = 'No es capicua';
     }
-    else {
-      res = "Es capicua";
-    }
-  }
+  });
   return res;
 }
 
@@ -120,18 +117,15 @@ function deleteAbc(cadena){
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
 
-  var array = cadena.split('');
   var res=[];
   
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0; i < cadena.length; i++) {
   
-    if (array[i]==='a' || array[i]==='b' || array[i]==='c') {
+    if (cadena[i]==='a' || cadena[i]==='b' || cadena[i]==='c') {
+      continue;
     }
-  
-    else 
-    {res.push(array[i])
-    };
-  
+
+    res.push(cadena[i]);
   }
   
   return(res.join(''));

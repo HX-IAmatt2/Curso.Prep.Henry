@@ -65,8 +65,8 @@ var newAr=[];
 
 array.forEach(function(e,i){
 
-    if (array[i][0] === 'a') {
-    newAr.push(array[i]);
+    if (e[0] === 'a') {
+    newAr.push(e);
     };
 });
 
