@@ -114,16 +114,20 @@ function deleteAbc(cadena){
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
 
-  var res=[];
-  
+  let res = [];
+  let arr = cadena.split(''); // Lo paso a un array (solo necesario si quiero usar forMap o forEach)
+
+  arr.map(e => {if (e==='a' || e==='b' || e==='c') {} else {res.push(e)}});
+
+  /* OPCION CON FOR, iterando directamente sobre el string orignal
   for (var i = 0; i < cadena.length; i++) {
   
     if (cadena[i]==='a' || cadena[i]==='b' || cadena[i]==='c') {
       continue;
     }
-
     res.push(cadena[i]);
   }
+*/  
   
   return(res.join(''));
 }
