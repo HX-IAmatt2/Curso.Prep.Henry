@@ -130,9 +130,13 @@ function pasarUsuarioAPremium(usuarios) {
   // Devuelve el array de usuarios
   // Tu código:
 
+  usuarios.map(e => e.esPremium=true)
+
+  /*
   for (let i=0; i<usuarios.length; i++) {
     usuarios[i].esPremium=true;}
-  
+  */
+
   return usuarios;
 }
 
@@ -145,10 +149,15 @@ function sumarLikesDeUsuario(usuario) {
   // Tu código:
 
   var suma=0;
+
+  usuario.posts.map(e => suma=suma+e.likes)
   
+  /*
   for (let i = 0; i < usuario.posts.length; i++) {
     suma=suma+usuario.posts[i].likes;
   }
+  */
+
   return suma;
 }
 

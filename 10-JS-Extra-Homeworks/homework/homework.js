@@ -98,16 +98,13 @@ function capicua(numero){
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
 
-  var res = 'Es capicua';
+  var res = 'Es capicua'; // Todo numero es capicua hasta que se demuestre lo contrario >P
   
-  let arr = numero.toString();  
-  arr = arr.split('');
+  let arr = numero.toString();  // lo paso a string  
+  arr = arr.split(''); // lo hago array
 
-  arr.forEach(function(e,i){
-    if (e !== arr[arr.length-(i+1)]){
-      res = 'No es capicua';
-    }
-  });
+  arr.map((e,i) => {if (e !== arr[arr.length-(i+1)]){res = 'No es capicua'}});  // Itero y comparo cada 'e' con la misma posicion equivalente desde el final.
+
   return res;
 }
 

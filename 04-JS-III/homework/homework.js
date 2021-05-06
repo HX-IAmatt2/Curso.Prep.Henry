@@ -73,6 +73,14 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
 
+  let res=false;
+
+  array.map(e => {if (e===elemento) {res=true}});
+  
+  return res;
+  
+
+  /* OPCION CON FOR
   for (let i=0; i<array.length; i++) {
     if (array[i]===elemento) {
       return true;
@@ -80,6 +88,7 @@ function arrayContiene(array, elemento) {
     }
   }
   return false;
+  */
 }
 
 
@@ -90,7 +99,7 @@ function agregarNumeros(numeros) {
 
   var total=0
 
-  numeros.forEach(e => total=total+e)
+  numeros.map(e => total=total+e)
 
   /* OPCION CON FOR:
   for (let i=0; i<numeros.length; i++) {
@@ -108,7 +117,7 @@ function promedioResultadosTest(resultadosTest) {
 
  var sumatoria=0;
 
- resultadosTest.forEach(e => sumatoria=sumatoria+e)  // opcion corta con forEach
+ resultadosTest.map(e => sumatoria=sumatoria+e)  // opcion corta con map
 
  // for (let i=0; i<resultadosTest.length; i++) {
  //   sumatoria=sumatoria+resultadosTest[i];}
@@ -125,7 +134,7 @@ function numeroMasGrande(numeros) {
 
   var mayor=0;
 
-  numeros.forEach(e => {if (e>mayor) {mayor=e}})   
+  numeros.map(e => {if (e>mayor) {mayor=e}})   
 
 /* OPCION CON FOR
   for (let i=0; i<numeros.length; i++) {
@@ -148,7 +157,7 @@ function multiplicarArgumentos() {
   if (arguments.length==0) {
     return 0;
   }
-    
+  
   for (let i=0; i<arguments.length; i++) {
     total=total*arguments[i];
   }
@@ -164,7 +173,7 @@ function cuentoElementos(arreglo){
 
   var conteo=0;
 
-  arreglo.forEach(e => {if (e>18) conteo++})
+  arreglo.map(e => {if (e>18) conteo++})
 
   /* OPCION CON FOR
   for (var i=0; i<arreglo.length; i++) {
@@ -183,7 +192,7 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
 
-if (numeroDeDia>=2 && numeroDeDia<=6){return 'Es dia Laboral'}
+if (numeroDeDia>=2 && numeroDeDia<=6) {return 'Es dia Laboral'}
 else {return 'Es fin de semana'};
 
 /* OPCION CON SWITCH
@@ -223,7 +232,7 @@ function todosIguales(arreglo) {
 
   var res=0;
 
-  arreglo.forEach(e => {if (e===arreglo[0]){res=true}else{res=false}});
+  arreglo.map(e => {if (e===arreglo[0]){res=true}else{res=false}});
 
   return res;
 
@@ -249,7 +258,7 @@ function mesesDelAño(array) {
 
   var final=[];
 
-  array.forEach(e=> {if (e==='Enero' || e==='Marzo' || e==='Noviembre') {final.push(e)}});
+  array.map(e=> {if (e==='Enero' || e==='Marzo' || e==='Noviembre') {final.push(e)}});
 
   /* OPCION CON FOR
   for (let i=0; i<array.length; i++) {
@@ -277,7 +286,7 @@ function mayorACien(array) {
   
   var res=[];
 
-  array.forEach(e=> {if (e>100) {res.push(e)}});
+  array.map(e=> {if (e>100) {res.push(e)}});
 
 /*OPCION CON FOR
   for (let i=0; i<array.length; i++) {
@@ -331,12 +340,21 @@ function continueStatement(numero) {
 
  let array=[]
 
+ // DEJAMOS ESTA OPCION PARA CUMPLIR CON EL USO DE CONTINUE
   for (let i=0; i<10; i++) {
-    if (i!=5) {
+    if (i==5) {continue}
+    else {numero=numero+2}
+    array.push(numero);
+  }
+
+  /* OTRA OPCION 
+  for (let i=0; i<10; i++) {
+    if (i!==5) {
     numero=numero+2;
     array.push(numero);
-    }
+    }    
   }
+  */
   return array;
 }
 
