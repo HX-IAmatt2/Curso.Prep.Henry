@@ -132,7 +132,7 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
 
-  var mayor=0;
+  let mayor=0;
 
   numeros.forEach(e => {if (e>mayor) {mayor=e}})   
 
@@ -152,7 +152,7 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 
-  var total=1;
+  let total=1;
 
   if (arguments.length==0) {
     return 0;
@@ -171,7 +171,7 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
-  var conteo=0;
+  let conteo=0;
 
   arreglo.map(e => {if (e>18) conteo++})
 
@@ -216,7 +216,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   
-  var num = n.toString()  // lo paso a string
+  let num = n.toString()  // lo paso a string
 
   if (num.startsWith('9')==true) {return true} else {return false};  // Usando metodo de cadena
   
@@ -230,7 +230,7 @@ function todosIguales(arreglo) {
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
 
-  var res=0;
+  let res=0;
 
   arreglo.map(e => {if (e===arreglo[0]){res=true}else{res=false}});
 
@@ -284,10 +284,12 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
   
-  var res=[];
+  let res = array.filter(e=> e>100);  
+  return res;
 
-  array.map(e=> {if (e>100) {res.push(e)}});
-
+//array.map(e=> {if (e>100) {res.push(e)}});  // con forEach o map
+  
+  
 /*OPCION CON FOR
   for (let i=0; i<array.length; i++) {
 
@@ -298,7 +300,6 @@ function mayorACien(array) {
   }
 */
 
-  return res;
 }
 
 
