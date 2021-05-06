@@ -4,7 +4,9 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
-  return nombre[0].toUpperCase() + nombre.slice(1);   // esto no fue explicado, repasar!!!
+
+  let res = nombre[0].toUpperCase() + nombre.slice(1);
+  return res;
 }
 
 function invocarCallback(cb) {
@@ -29,7 +31,7 @@ function sumarArray(numeros, cb) {
   // No es necesario devolver nada
   //Tu código:
 
-  var sum = 0;
+  let sum = 0;
 
   numeros.forEach(e => sum=sum+e);
 
@@ -50,7 +52,8 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
 
-  var newAr = []
+  let newAr = []
+  
   newAr = array.map(e => cb(e));
      
   return newAr;
@@ -61,14 +64,9 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
 
-var newAr=[];
+let newAr=[];
 
-array.forEach(function(e,i){
-
-    if (e[0] === 'a') {
-    newAr.push(e);
-    };
-});
+array.map((e) => {if (e[0] === 'a') {newAr.push(e)}})
 
 return newAr;
 }
