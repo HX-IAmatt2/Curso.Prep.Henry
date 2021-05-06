@@ -134,7 +134,7 @@ function numeroMasGrande(numeros) {
 
   var mayor=0;
 
-  numeros.map(e => {if (e>mayor) {mayor=e}})   
+  numeros.forEach(e => {if (e>mayor) {mayor=e}})   
 
 /* OPCION CON FOR
   for (let i=0; i<numeros.length; i++) {
@@ -218,10 +218,10 @@ function empiezaConNueve(n) {
   
   var num = n.toString()  // lo paso a string
 
-  if (num[0]==9) {return true}
+  if (num.startsWith('9')==true) {return true} else {return false};  // Usando metodo de cadena
   
-  return false;
-
+  // if (num[0]==9) {return true} else {return false};  
+  
 }
 
 
@@ -256,9 +256,11 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
 
-  var final=[];
+  let final=[];
 
-  array.map(e=> {if (e==='Enero' || e==='Marzo' || e==='Noviembre') {final.push(e)}});
+  final = array.filter(e=> e==='Enero' || e==='Marzo' || e==='Noviembre')  // Con filter nos ahorramos el IF y el PUSH !
+
+  //array.map(e=> {if (e==='Enero' || e==='Marzo' || e==='Noviembre') {final.push(e)}});  // opcion con map (o forEach)
 
   /* OPCION CON FOR
   for (let i=0; i<array.length; i++) {
@@ -268,13 +270,11 @@ function mesesDelAño(array) {
     }
   }*/
 
-  if (final.length===3) {
-    return final;
-  }
+  if (final.includes('Enero') && final.includes('Marzo') && final.includes('Noviembre')) {return final}
 
-  else {
-    return "No se encontraron los meses pedidos"
-  }
+//if (final.length===3) {return final;} // Otra verificacion mas rancia
+
+  else {return "No se encontraron los meses pedidos"};
 
 }
 
