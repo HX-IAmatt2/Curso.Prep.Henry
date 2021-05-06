@@ -37,7 +37,6 @@ img {
     margin: 3rem;
 }
 
-
 .secc-container ul {
     list-style:none;
     display:flex;
@@ -61,7 +60,6 @@ img {
     color:rgb(98, 1, 255);
     transform: scale(1.5);
 }
-
 
 #navbar {
     padding: 0.8rem;
