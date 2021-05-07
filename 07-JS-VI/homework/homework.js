@@ -52,9 +52,8 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
 
-  let newAr = []
   
-  newAr = array.map(e => cb(e));
+  let newAr = array.map(e => cb(e));
      
   return newAr;
 }
@@ -64,9 +63,7 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
 
-let newAr=[];
-
-array.map((e) => {if (e[0] === 'a') {newAr.push(e)}})
+let newAr=array.filter(e=> (e[0]=='a'));
 
 return newAr;
 }

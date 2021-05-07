@@ -287,7 +287,7 @@ function mayorACien(array) {
   let res = array.filter(e=> e>100);  
   return res;
 
-//array.map(e=> {if (e>100) {res.push(e)}});  // con forEach o map
+// array.map(e=> {if (e>100) {res.push(e)}});  // con forEach o map
   
   
 /*OPCION CON FOR
