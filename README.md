@@ -1,3 +1,8 @@
+---
+ title: Home
+ layout: base.njk
+---
+
 <img  src='./logo.png' height='70px'>
 
 ## Introducción
