@@ -22,7 +22,7 @@ permalink: "/{{ title }}/index.html"
 
 Acá vas a encontrar todo lo que necesitas para arrancar el Curso de Preparación:
 
-* [Editor de Texto](./editorTexto.md)
+* [Editor de Texto](./editorTexto)
 * [Github](./github.md)
 * [Git](./git.md)
 * [Instalar Node](./node.md)

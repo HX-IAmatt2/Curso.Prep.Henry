@@ -1,3 +1,8 @@
+---
+title: Editor de Texto
+permalink: "/00-PrimerosPasos/editorTexto/index.html"
+---
+
 # Editor de Texto.
 
 Para poder escribir código que pueda ser interpretado por un lenguaje de programación, necesitamos utilizar un editor de texto.
@@ -7,7 +12,7 @@ A continuación van a ver una lista de algunos editores de textos populares:
 
 # [Sublime Text](https://www.sublimetext.com)
 
-![Sublime text](./img/sublime.png)
+![Sublime text](../img/sublime.png)
 
 Es un editor de texto liviano, que cuenta con una serie de plugins para adaptarlo a las necesidades de cada desarrollador.
 
@@ -28,7 +33,7 @@ Presionamos el botón Download
 
 Elegimos la opción adecuada según nuestro sistema operativo e iniciamos la descarga.
 
-![Sublime text Dowload](./img/sublimeDownload.png)
+![Sublime text Dowload](../img/sublimeDownload.png)
 
 Finalizada la descarga, ejecutamos el instalador, seleccionamos las opciones siguiente, siguiente, etc, hasta completar el proceso.
 
@@ -40,29 +45,29 @@ Aquí encontrarás las instrucciones para instalarlo https://www.sublimetext.com
 
 En la terminal, ejecutamos el siguiente comando, para instalar la clave GPG:
 
-![Sublime text](./img/sublime_comando_1.png)
+![Sublime text](../img/sublime_comando_1.png)
 
 Para asegurarte de que apt esté configurado para trabajar con orígenes https, ejecutamos:
 
-![Sublime text](./img/sublime_comando_2.png)
+![Sublime text](../img/sublime_comando_2.png)
 
 Para agregar el repositorio estable, ejecutamos:
 
-![Sublime text](./img/sublime_comando_3.png)
+![Sublime text](../img/sublime_comando_3.png)
 
 Finalmente, procedemos a instalar el programa:
 
 
-![Sublime text](./img/sublime_comando_4.png)
+![Sublime text](../img/sublime_comando_4.png)
 
 Ahora, si en el Menú de inicio buscamos Sublime text, veremos la siguiente imagen:
 
-![Sublime text](./img/sublime_instalado.png)
+![Sublime text](../img/sublime_instalado.png)
 
 
 # [Atom](https://atom.io/)
 
-![Sublime text](./img/atom_site.png)
+![Sublime text](../img/atom_site.png)
 
 Es un editor de código abierto, disponible tanto para Windows, como Linux y para OS X.
 
@@ -92,7 +97,7 @@ al hacer doble click, se abrirá el editor.
 
 # [Visual Studio Code](https://code.visualstudio.com/)
 
-![Sublime text](./img/vc_consola.png)
+![Sublime text](../img/vc_consola.png)
 
 Es un editor desarrollado por Microsoft.
 Tiene integrada el control de versiones mediante Git y Github para tener un seguimiento de tus proyectos. Brinda una cantidad de extensiones que facilitan el trabajo de un desarrollador.
@@ -102,7 +107,7 @@ Para descargarlo, nos dirigimos al sitio oficial, en la sección Dowload y desca
 <https://code.visualstudio.com/download>
 
 |-|
-| ![Sublime text](./img/dowload_vc.png) |
+| ![Sublime text](../img/dowload_vc.png) |
 |-|
 
 Una vez finalizada la descarga, procedemos a ejecutar el instalador.
