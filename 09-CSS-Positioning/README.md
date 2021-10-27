@@ -1,3 +1,8 @@
+---
+title: 09-CSS-Positioning
+permalink: "/{{ title }}/index.html"
+---
+
 <p align='left'>
     <img  src='../logo.png' height='70px'>
 </p>

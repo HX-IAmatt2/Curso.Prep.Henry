@@ -1,4 +1,8 @@
-<img  src='./_src/assets/logo.png' height='70px'>
+---
+permalink: "/index.html"
+---
+
+<img  src='./logo.png' height='70px'>
 
 ## Introducción
 

@@ -1,3 +1,8 @@
+---
+title: 06-JS-V
+permalink: "/{{ title }}/index.html"
+---
+
 <p align='left'>
     <img  src='../logo.png' height='70px'>
 </p>

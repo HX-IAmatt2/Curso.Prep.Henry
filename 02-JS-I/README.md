@@ -1,3 +1,8 @@
+---
+title: 02-JS-I
+permalink: "/{{ title }}/index.html"
+---
+
 <img  src='../logo.png' height='70px'>
 <table width="100%" style='table-layout:fixed;'>
   <tr>

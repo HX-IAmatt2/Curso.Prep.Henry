@@ -1,3 +1,8 @@
+---
+title: 08-HTML
+permalink: "/{{ title }}/index.html"
+---
+
 <p align='left'>
     <img  src='../logo.png' height='70px'>
 </p>

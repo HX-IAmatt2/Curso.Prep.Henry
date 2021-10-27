@@ -1,3 +1,8 @@
+---
+title: 04-JS-III
+permalink: "/{{ title }}/index.html"
+---
+
 <p align='left'>
     <img  src='../logo.png' height='70px'>
 </p>

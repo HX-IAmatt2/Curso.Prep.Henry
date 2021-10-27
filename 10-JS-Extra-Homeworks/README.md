@@ -1,3 +1,8 @@
+---
+title: 10-JS-Extra-Homeworks
+permalink: "/{{ title }}/index.html"
+---
+
 # Homework: Javascript X - Ejercicios Extras
 
 ## Instrucciones
