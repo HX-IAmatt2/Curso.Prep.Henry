@@ -3,7 +3,7 @@
  layout: base.njk
 ---
 
-<img  src='./logo.png' height='70px'>
+<img  src='./_src/assets/logo.png' height='70px'>
 
 ## Introducción
 
