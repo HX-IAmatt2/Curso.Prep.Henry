@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
       return {
         dir: {
           includes: "/_src/layouts",
+          data: "/_src/data",
           output: "_dist",
         },
       };
