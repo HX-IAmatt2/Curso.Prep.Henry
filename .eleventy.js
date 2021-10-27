@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
 
       return {
         dir: {
-          // input: "*.md",
+          includes: "/_src/layouts",
           output: "_dist",
         },
       };

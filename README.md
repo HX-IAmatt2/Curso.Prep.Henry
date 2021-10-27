@@ -1,6 +1,6 @@
 ---
  title: Home
- layout: base.njk
+ layout: lesson.njk
 ---
 
 <img  src='./_src/assets/logo.png' height='70px'>
